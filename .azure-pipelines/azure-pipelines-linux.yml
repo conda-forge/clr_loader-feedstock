@@ -16,8 +16,16 @@ jobs:
         CONFIG: linux_64_dotnet_runtime3.1python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_dotnet_runtime3.1python3.8.____73_pypy:
+        CONFIG: linux_64_dotnet_runtime3.1python3.8.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_dotnet_runtime3.1python3.8.____cpython:
         CONFIG: linux_64_dotnet_runtime3.1python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_dotnet_runtime3.1python3.9.____73_pypy:
+        CONFIG: linux_64_dotnet_runtime3.1python3.9.____73_pypy
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_dotnet_runtime3.1python3.9.____cpython:
@@ -32,8 +40,16 @@ jobs:
         CONFIG: linux_64_dotnet_runtime5.0python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_dotnet_runtime5.0python3.8.____73_pypy:
+        CONFIG: linux_64_dotnet_runtime5.0python3.8.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_dotnet_runtime5.0python3.8.____cpython:
         CONFIG: linux_64_dotnet_runtime5.0python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_dotnet_runtime5.0python3.9.____73_pypy:
+        CONFIG: linux_64_dotnet_runtime5.0python3.9.____73_pypy
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_dotnet_runtime5.0python3.9.____cpython:
@@ -48,14 +64,23 @@ jobs:
         CONFIG: linux_64_dotnet_runtime6.0python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_dotnet_runtime6.0python3.8.____73_pypy:
+        CONFIG: linux_64_dotnet_runtime6.0python3.8.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_dotnet_runtime6.0python3.8.____cpython:
         CONFIG: linux_64_dotnet_runtime6.0python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_dotnet_runtime6.0python3.9.____73_pypy:
+        CONFIG: linux_64_dotnet_runtime6.0python3.9.____73_pypy
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_dotnet_runtime6.0python3.9.____cpython:
         CONFIG: linux_64_dotnet_runtime6.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+    maxParallel: 17
   timeoutInMinutes: 360
 
   steps:
