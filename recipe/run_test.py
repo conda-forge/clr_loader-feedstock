@@ -22,5 +22,6 @@ runtime_config = {
 }
 with tempfile.TemporaryDirectory() as tmpdir:
     runtime_config_file = os.path.join(tmpdir, 'runtime_config.json')
-    json.dump(runtime_config, open(runtime_config_file, 'w'))
+    with open(runtime_config_file, 'w') as file:
+        file.write(json.dumps(runtime_config))
     clr_loader.get_coreclr(runtime_config_file)
