@@ -2,27 +2,26 @@ diff --git a/setup.py b/setup.py
 index efd98bc1cb4531f17c8e07f65a3f3ab1316c80d0..ad55d7dbed1808af481430bc55de806f29e0ba85 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -28,6 +28,23 @@ class BuildDotnet(Command):
+@@ -28,6 +28,22 @@ class BuildDotnet(Command):
 
      def run(self):
          for lib in self.distribution.ext_modules:
 +            if 'output' in lib.args:
 +                import os
 +                arch = os.getenv("build_platform")
-+                py = os.getenv("PY_VER")
++                impl = os.getenv("python_impl")
++                py = os.getenv("PY_VER").replace(".", "")
 +                if arch == "win-64":
-+                    impl = os.getenv("python_impl")
-+                    py = py.replace(".", "")
-+                    if impl == "pypy":
-+                        impl = f"{impl}{py}"
-+                    else:
-+                        impl = f"{impl}-{py}"
-+                    arch = f"win-amd64-{impl}"
++                    arch = "win-amd64"
 +                elif arch == "linux-64":
-+                    arch = f"linux-x86_64-{py}"
++                    arch = "linux-x86_64"
 +                elif arch == "osx-64":
-+                    arch = f"macosx-10.9-x86_64-{py}"
-+                lib.args["output"] = f"build/lib.{arch}/{lib.args['output']}"
++                    arch = "macosx-10.9-x86_64"
++                if impl == "pypy":
++                    impl_py = f"{impl}{py}"
++                else:
++                    impl_py = f"{impl}-{py}"
++                lib.args["output"] = f"build/lib.{arch}-{impl_py}/{lib.args['output']}"
              opts = sum(
                  [
                      ["--" + name.replace("_", "-"), value]
