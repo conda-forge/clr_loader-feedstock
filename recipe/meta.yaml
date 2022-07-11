@@ -22,7 +22,7 @@ requirements:
     - dotnet-sdk >=5
     - sysroot_linux-64 2.17  # [linux64]
   host:
-    - python
+    - python >=3.0
     - pip
     - setuptools
     - wheel
@@ -30,7 +30,7 @@ requirements:
     - cffi >=1.13  # [python_impl != 'pypy']
     - dotnet-runtime
     - mono  # [not win]
-    - python
+    - python >=3.0
     - __glibc >=2.17  # [linux64]
 
 test:
