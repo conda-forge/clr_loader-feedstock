@@ -18,7 +18,6 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
     - dotnet-sdk >=5
   host:
     - python >=3.0
