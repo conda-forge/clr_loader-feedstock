@@ -12,31 +12,30 @@ source:
     - dotnet-build-output.patch
 
 build:
-  number: 2
+  number: 3
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
-    - {{ compiler('c') }}  # [linux64]
     - dotnet-sdk >=5
-    - sysroot_linux-64 2.17  # [linux64]
   host:
-    - python
+    - python >=3.0
     - pip
     - setuptools
     - wheel
   run:
-    - cffi >=1.13  # [python_impl != 'pypy']
-    - dotnet-runtime {{ dotnet_runtime }}.*
-    - mono  # [not win]
-    - python
-    - __glibc >=2.17  # [linux64]
+    - cffi >=1.13
+    - dotnet-runtime
+    - python >=3.0
 
 test:
   imports:
     - clr_loader
   requires:
     - pip
+    - dotnet-runtime 6.0
+    - mono
   commands:
     - pip check
 
