@@ -1,5 +1,4 @@
 import json
-import os
 import sys
 import tempfile
 
@@ -10,13 +9,12 @@ if sys.platform == 'win32':
     clr_loader.get_netfx()
 if sys.platform != 'win32':
     clr_loader.get_mono()
-dotnet_runtime = os.getenv('dotnet_runtime')
 runtime_config = {
     'runtimeOptions': {
-        'tfm': f'netcoreapp{dotnet_runtime}',
+        'tfm': 'netcoreapp6.0',
         'framework': {
             'name': 'Microsoft.NETCore.App',
-            'version': f'{dotnet_runtime}.0',
+            'version': '6.0.0',
         },
     },
 }
