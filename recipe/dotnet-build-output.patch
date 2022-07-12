@@ -10,7 +10,7 @@ index efd98bc1cb4531f17c8e07f65a3f3ab1316c80d0..ad55d7dbed1808af481430bc55de806f
 +                import os
 +                import sys
 +                arch = os.getenv("build_platform")
-+                impl = os.getenv("python_impl")
++                impl = os.getenv("python_impl", "cpython")
 +                py = f'{sys.version_info.major}{sys.version_info.minor}'
 +                if arch == "win-64":
 +                    arch = "win-amd64"
