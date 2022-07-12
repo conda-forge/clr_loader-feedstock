@@ -12,7 +12,7 @@ source:
     - dotnet-build-output.patch
 
 build:
-  number: 3
+  number: 4
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -35,6 +35,7 @@ test:
   requires:
     - pip
     - dotnet-runtime 6.0
+    - importlib_resources
     - mono
   commands:
     - pip check
