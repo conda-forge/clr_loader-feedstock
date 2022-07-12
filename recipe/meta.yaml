@@ -35,6 +35,7 @@ test:
   requires:
     - pip
     - dotnet-runtime 6.0
+    - importlib_resources
     - mono
   commands:
     - pip check
