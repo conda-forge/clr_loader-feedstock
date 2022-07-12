@@ -26,7 +26,6 @@ requirements:
     - wheel
   run:
     - cffi >=1.13
-    - dotnet-runtime
     - python >=3.0
 
 test:
