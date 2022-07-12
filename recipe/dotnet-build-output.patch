@@ -2,15 +2,16 @@ diff --git a/setup.py b/setup.py
 index efd98bc1cb4531f17c8e07f65a3f3ab1316c80d0..ad55d7dbed1808af481430bc55de806f29e0ba85 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -28,6 +28,22 @@ class BuildDotnet(Command):
+@@ -28,6 +28,23 @@ class BuildDotnet(Command):
 
      def run(self):
          for lib in self.distribution.ext_modules:
 +            if 'output' in lib.args:
 +                import os
++                import sys
 +                arch = os.getenv("build_platform")
 +                impl = os.getenv("python_impl")
-+                py = os.getenv("PY_VER").replace(".", "")
++                py = f'{sys.version_info.major}{sys.version_info.minor}'
 +                if arch == "win-64":
 +                    arch = "win-amd64"
 +                elif arch == "linux-64":
