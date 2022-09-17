@@ -1,5 +1,5 @@
 {% set name = "clr_loader" %}
-{% set version = "0.1.7" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bd1967d3cf80368c7d890a332704f169c5d2b5d7141635f1dae84d7d40346d51
-  patches:
-    - dotnet-build-output.patch
+  sha256: b29894f19e075f10901152733f8d172489d298e739fa88a33d0a8fbc0649011f
 
 build:
-  number: 5
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -22,7 +20,7 @@ requirements:
   host:
     - python >=3.0
     - pip
-    - setuptools
+    - setuptools >=61
     - wheel
   run:
     - cffi >=1.13
@@ -44,7 +42,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Generic pure Python loader for .NET runtimes'
+  summary: Generic pure Python loader for .NET runtimes
   dev_url: https://github.com/pythonnet/clr-loader
 
 extra:
