@@ -1,5 +1,5 @@
 {% set name = "clr_loader" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b29894f19e075f10901152733f8d172489d298e739fa88a33d0a8fbc0649011f
+  sha256: 7b4516e363b3054b46e93a3d39cb1968e58d6eeccea0e8c0bc86f1100a2f4cc5
 
 build:
   number: 0
@@ -16,15 +16,16 @@ build:
 
 requirements:
   build:
-    - dotnet-sdk >=5
+    - dotnet-sdk >=6
   host:
-    - python >=3.0
+    - python >=3.7
     - pip
     - setuptools >=61
+    - setuptools-scm
     - wheel
   run:
     - cffi >=1.13
-    - python >=3.0
+    - python >=3.7
 
 test:
   imports:
