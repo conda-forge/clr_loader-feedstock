@@ -21,7 +21,7 @@ requirements:
     - python >=3.7
     - pip
     - setuptools >=61
-    - setptools-scm
+    - setuptools-scm
     - wheel
   run:
     - cffi >=1.13
