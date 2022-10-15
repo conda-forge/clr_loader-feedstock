@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - dotnet-sdk >=5
+    - dotnet-sdk >=6
   host:
     - python >=3.7
     - pip
