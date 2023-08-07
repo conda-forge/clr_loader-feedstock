@@ -1,11 +1,11 @@
-About clr_loader
-================
+About clr_loader-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/clr_loader-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pythonnet/clr-loader
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/clr_loader-feedstock/blob/main/LICENSE.txt)
 
 Summary: Generic pure Python loader for .NET runtimes
 
