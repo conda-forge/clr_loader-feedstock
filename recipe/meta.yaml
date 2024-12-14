@@ -18,20 +18,21 @@ requirements:
   build:
     - dotnet-sdk >=6
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools >=75
     - setuptools-scm
     - wheel
   run:
     - cffi >=1.17
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
     - clr_loader
   requires:
     - pip
+    - python {{ python_min }}
     - dotnet-runtime 6.0
     - importlib_resources
     - mono
