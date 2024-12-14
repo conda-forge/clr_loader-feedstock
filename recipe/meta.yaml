@@ -20,11 +20,11 @@ requirements:
   host:
     - python >=3.7
     - pip
-    - setuptools >=61
+    - setuptools >=75
     - setuptools-scm
     - wheel
   run:
-    - cffi >=1.13
+    - cffi >=1.17
     - python >=3.7
 
 test:
