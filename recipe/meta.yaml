@@ -16,9 +16,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib('c') }}
-    - dotnet-sdk >=6
+    - dotnet-sdk 8.0.*
   host:
     - python {{ python_min }}
     - pip
@@ -35,7 +33,7 @@ test:
   requires:
     - pip
     - python {{ python_min }}
-    - dotnet-runtime 6.0
+    - dotnet-runtime 8.0.+
     - importlib_resources
     - mono
   commands:
