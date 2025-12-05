@@ -16,6 +16,8 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - dotnet-sdk >=6
   host:
     - python {{ python_min }}
