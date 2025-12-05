@@ -1,5 +1,5 @@
 {% set name = "clr_loader" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b4cd3a2ee5f0489885ef07ffd87eb38b2cee24ca65dcacea97b34e7b59913814
+  sha256: 6af3d582c3de55ce9e9e676d2b3dbf6bc680c4ea8f76c58786739a5bdcf6b52d
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - dotnet-sdk >=6
+    - dotnet-sdk 8.0.*
   host:
     - python {{ python_min }}
     - pip
@@ -33,7 +33,7 @@ test:
   requires:
     - pip
     - python {{ python_min }}
-    - dotnet-runtime 6.0
+    - dotnet-runtime 8.0.*
     - importlib_resources
     - mono
   commands:
