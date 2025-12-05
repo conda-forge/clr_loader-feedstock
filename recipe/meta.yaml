@@ -33,7 +33,7 @@ test:
   requires:
     - pip
     - python {{ python_min }}
-    - dotnet-runtime 8.0.+
+    - dotnet-runtime 8.0.*
     - importlib_resources
     - mono
   commands:
