@@ -1,5 +1,5 @@
 {% set name = "clr_loader" %}
-{% set version = "0.2.9" %}
+{% set version = "0.2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6af3d582c3de55ce9e9e676d2b3dbf6bc680c4ea8f76c58786739a5bdcf6b52d
+  sha256: 81f114afbc5005bafc5efe5af1341d400e22137e275b042a8979f3feb9fc9446
 
 build:
   number: 0
