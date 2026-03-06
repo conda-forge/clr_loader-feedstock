@@ -1,5 +1,5 @@
 {% set name = "clr_loader" %}
-{% set version = "0.2.10" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 81f114afbc5005bafc5efe5af1341d400e22137e275b042a8979f3feb9fc9446
+  sha256: b880e0821cdc18f9bf9f05e5130e966cc78fa75edc7432baf4fa4711e8412b05
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=75
+    - setuptools >=80
     - setuptools-scm
     - wheel
   run:
